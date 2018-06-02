@@ -58,7 +58,12 @@ class App extends Component {
 
   onGenerateTopic = () => {
     if (this.state.topicHeader.length >= 10 && this.state.selectedValue.length > 0) {
-      this.setState({ generatedTopic: true });
+      if(this.state.topicHeader.length > 100 && this.state.selectedValue.length > 10) {
+        this.setState({ generatedTopic: true });
+      }
+      else {
+        alert('หัวข้อกระทู้ห้ามเกิน 100 ตัวอักษร และ Tag ห้ามเกิน 10');
+      }
     }
     else {
       alert('หัวข้อกระทู้ต้องมีอย่างน้อย 10 ตัว และมี Tag อย่างน้อย 1');
