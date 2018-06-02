@@ -58,7 +58,7 @@ class App extends Component {
 
   onGenerateTopic = () => {
     if (this.state.topicHeader.length >= 10 && this.state.selectedValue.length > 0) {
-      if(this.state.topicHeader.length > 100 && this.state.selectedValue.length > 10) {
+      if(this.state.topicHeader.length <= 100 && this.state.selectedValue.length <= 10) {
         this.setState({ generatedTopic: true });
       }
       else {
