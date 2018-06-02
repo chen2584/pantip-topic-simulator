@@ -84,8 +84,11 @@ class App extends Component {
                     {
                       this.state.selectedValue.map((data, key) => {
                         return (
-                          <div className="topic-tag" key={key} style={key === 0 ? { marginLeft: 0 } : { marginLeft: 5 }}>
-                            {data}
+                          <div style={{ display: 'inline-block' }}>
+                            <div className="topic-tag" key={key} style={{ marginRight: 5 }}>
+                              {data}
+                            </div>
+                            &nbsp;
                           </div>
                         )
                       })
